@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+{% block title %} update {% if user %}{{ user.email }}{% endif %} {% endblock %}
+
+{% block content %}
+
+{% if user %}
+<h1 class="lead my-3">update <small>user {{ user.email }}</small></h1>
+
+<form class="card" method="POST">
+    <div class="card-body">
+    <div class="mb-3">
+        <sup>email</sup>
+        <input
+            type="email"
+            name="email"
+            value="{{ user.email }}"
+            class="form-control"
+        />
+    </div>
+
+    <div class="m-2">
+        <sup class="float-start mb-2">username</sup>
+        <input
+            type="text"
+            name="username"
+            value="{{ user.username }}"
+            class="form-control my-2"
+        />
+    </div>
+
+    <div class="m-2">
+        <button type="submit" class="btn btn-outline-primary btn-sm">
+            submit
+        </button>
+    </div>
+</form>
+
+<div class="card">
+    <div class="card-header">
+        <a href="/account/password-change">password change</a>
+    </div>
+</div>
+{% endif %}
+
+{% endblock %}

@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block title %} logout {% endblock title %}
+
+{% block content %}
+<div class="row row-cols-1 row-cols-md-3 mb-3 text-center justify-content-center">
+    <div class="col">
+        <div class="form-logout">
+            <form method="POST">
+                <img class="mb-4" src="/assets/icon/img/apple-touch-icon.png" alt="" width="180" height="180">
+                <button class="btn btn-primary w-100 mt-2" type="submit">logout</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+{% endblock content %}

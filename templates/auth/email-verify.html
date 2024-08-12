@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% block title %} email-verify {% endblock %}
+{% block content %}
+
+<div class="row mb-3 text-center justify-content-center">
+    <div class="col-8">
+        <h1>===This Your EMAIL==</h1>
+        <div class="m-1">
+            {% if verify %}
+            Go to email-verify : <a href="https://rs.binetc.site/account/email-verify?token={{verify}}"> verify</a>
+            {% endif %}
+            {% if pwd %}
+            Go to change password: <a href="https://rs.binetc.site/account/reset-password-confirm?token={{pwd}}"> verify</a>
+            {% endif %}
+        </div>
+    </div>
+</div>
+
+{% endblock content %}

@@ -1,0 +1,15 @@
+{% if messages %}
+<div class="row mb-3 justify-content-center">
+    <div class="col-8">
+        {% for message in messages %}
+        <div class="alert alert-dismissible {% if message.tags %}alert-{{ message.tags }}{% endif %} text-break">
+            {{ message.content }}
+            <button type="button"
+                    class="btn-close"
+                    data-bs-dismiss="alert"
+                    aria-label="Close"></button>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+{% endif %}
